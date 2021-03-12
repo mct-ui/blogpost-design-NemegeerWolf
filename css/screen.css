@@ -88,6 +88,10 @@ h2 {
   margin: 0 0 24px;
 }
 
+* + h2 {
+  margin-top: 48px;
+}
+
 h3 {
   font-size: 18px;
   line-height: 24px;
@@ -191,6 +195,40 @@ a:focus {
 @media (min-width: 1200px) {
 }
 
+/* components: author */
+
+.c-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  border-style: solid;
+  border-width: 0 0 0 8px;
+  border-color: #1abaff;
+  background-color: #b3e8ff;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.c-author__name,
+.c-author__meta {
+  margin-bottom: 0;
+}
+
+.c-author__meta {
+  font-size: 14px;
+  font-family: 'inter', 'helvetica Neue', 'helvetica', arial, sans-serif;
+  line-height: 24px;
+}
+
+.c-author__name {
+  font-size: 16px;
+  line-height: 24px;
+}
 /*
     Print styles.
     ---
