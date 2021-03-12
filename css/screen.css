@@ -28,13 +28,12 @@ html {
   /* font-family: 'Inter Web', 'Helvetica Neue', Helvetica, arial, sans-serif;*/
   font-family: 'Droid-serif', georgia, serif;
   color: #2e3133;
-  padding: 48px 24px 24px;
+  /*padding: 48px 24px 24px;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  max-width: 42em;
   margin: 0 auto;
 }
 
@@ -177,7 +176,7 @@ a:focus {
 
 @media (min-width: 768px) {
   html {
-    padding: 48px 48px 24px;
+    /*  padding: 48px 48px 24px; */
   }
   h1 {
     font-size: 58px;
@@ -188,13 +187,63 @@ a:focus {
 /* Large devices (landscape tablets, desktops, 992px and up) */
 
 @media (min-width: 992px) {
+  .c-article__author {
+  }
+
+  /* Extra large devices (large desktops, 1200px and up) */
+
+  @media (min-width: 1200px) {
+  }
+
+  /*components: article*/
+
+  .c-article__header,
+  .c-article__body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .c-article__header {
+    padding: 24px 24px 0;
+  }
+
+  .c-article__body {
+    padding: 24px 24px 0;
+  }
+
+  .c-article__author {
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    .c-article__header {
+      padding: 48px 48px 24px;
+    }
+
+    .c-article__author {
+      padding-bottom: 24px;
+    }
+
+    .c-article__body {
+      padding: 24px 48px;
+    }
+  }
+
+   @media (min-width: 992px) {
+    .c-article__body {
+
+        display: flex;
+        gap: 24px;
+      }
+
+    .c-article__author {
+      width: 25%;
+    }
+  
+    .c-article__content {
+      width: 75%;
+    }
 }
-
-/* Extra large devices (large desktops, 1200px and up) */
-
-@media (min-width: 1200px) {
-}
-
 /* components: author */
 
 .c-author {
@@ -202,10 +251,10 @@ a:focus {
   align-items: center;
   gap: 16px;
   margin: 24px 0;
-  border-style: solid;
-  border-width: 0 0 0 8px;
+  /*border-style: solid;
+  border-width: 0 0 0 1em;
   border-color: #1abaff;
-  background-color: #b3e8ff;
+  background-color: #b3e8ff;*/
 }
 
 .c-author__image {
@@ -228,6 +277,17 @@ a:focus {
 .c-author__name {
   font-size: 16px;
   line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  .c-author {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.u-max-width-sm {
+  max-width: 36em;
 }
 /*
     Print styles.
